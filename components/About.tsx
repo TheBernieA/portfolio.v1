@@ -60,7 +60,7 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
           >
             A glimpse of the things I'm experienced with:
           </motion.h4>
-          <div className="w-full grid grid-cols-3 md:grid-cols-5 gap-36">
+          <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-x-20 gap-y-6 md:gap-36">
             <motion.ul
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
