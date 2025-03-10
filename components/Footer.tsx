@@ -1,5 +1,6 @@
 import { links } from "@/database";
 import { assets } from "@/public/assets";
+import BernardLogo from "@/shared/components/Logo";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,12 +9,15 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
     <footer className="mt-20">
       <div className="text-center">
-        <Image
+        {/* <Image
           src={isDarkMode ? assets.logo_dark : assets.logo}
           alt=""
           className="w-36 mx-auto mb-2"
-        />
-        <div className="w-max flex items-center gap-2 mx-auto">
+        /> */}
+        <Link href={`/`}>
+          <BernardLogo />
+        </Link>
+        <div className="w-max flex items-center gap-2 mx-auto mt-4">
           <Image
             src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
             alt=""

@@ -1,8 +1,7 @@
-import React from "react";
-import { infoList, toolsData } from "@/database";
+import { aboutMe, backend, database, frontend, tools } from "@/database";
 import { assets } from "@/public/assets";
-import Image from "next/image";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
@@ -53,66 +52,84 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex-1"
         >
-          <p className="mb-10 max-w-2xl font-ovo">
-            I'm an engineer who loves working on challenging problems, cracking
-            them into simpler solutions. I build scalable backend applications,
-            using state of the art technologies with security in mind. I am a
-            big advocate of statecharts and, I love the reactive programming
-            paradigms of rxjs. I graduated from Kwame Nkrumah University of
-            Science and Technology with a bachelor's in Computer Engineering,
-            and for the past 4+ years, I've been among several teams engineering
-            the next big stuff. A glimpse of the things I'm experienced with:
-          </p>
-          <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
-          >
-            {infoList.map((info, index) => (
-              <motion.li
-                whileInView={{ scale: 1.05 }}
-                key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white dark:hover:bg-darkHover/50"
-              >
-                <Image
-                  src={isDarkMode ? info.iconDark : info.icon}
-                  alt={info.title}
-                  className="w-7 mt-3"
-                />
-                <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
-                  {info.title}
-                </h3>
-                <p className="text-gray-600 text-sm dark:text-white/80">
-                  {info.description}
-                </p>
-              </motion.li>
-            ))}
-          </motion.ul>
+          <p className="mb-10 max-w-2xl font-ovo">{aboutMe}</p>
           <motion.h4
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.3, delay: 0.5 }}
-            className="my-6 text-gray-700 font-ovo dark:text-white"
-          >
-            Tools I use
-          </motion.h4>
-          <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.6 }}
-            className="flex items-center gap-3 sm:gap-5"
+            className="mb-3"
           >
-            {toolsData.map((tool, index) => (
-              <motion.li
-                whileHover={{ scale: 1.05 }}
-                key={index}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
-              >
-                <Image src={tool} alt="" className="w-5 sm:w-7" />
-              </motion.li>
-            ))}
-          </motion.ul>
+            A glimpse of the things I'm experienced with:
+          </motion.h4>
+          <div className="w-full grid grid-cols-3 md:grid-cols-5 gap-36">
+            <motion.ul
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 0.6 }}
+              className="flex flex-col gap-1"
+            >
+              <h4 className="capitalize mb-4">frontend</h4>
+              {frontend.map((tool, index) => (
+                <motion.li
+                  whileHover={{ scale: 1.05 }}
+                  key={index}
+                  className="cursor-pointer whitespace-nowrap capitalize"
+                >
+                  <span className="text-orange-400 mr-2">▸</span> {tool}
+                </motion.li>
+              ))}
+            </motion.ul>
+            <motion.ul
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 0.6 }}
+              className="flex flex-col gap-1"
+            >
+              <h4 className="capitalize mb-4">backend</h4>
+              {backend.map((tool, index) => (
+                <motion.li
+                  whileHover={{ scale: 1.05 }}
+                  key={index}
+                  className="cursor-pointer whitespace-nowrap capitalize"
+                >
+                  <span className="text-orange-400 mr-2">▸</span> {tool}
+                </motion.li>
+              ))}
+            </motion.ul>
+            <motion.ul
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 0.6 }}
+              className="flex flex-col gap-1"
+            >
+              <h4 className="capitalize mb-4">database</h4>
+              {database.map((tool, index) => (
+                <motion.li
+                  whileHover={{ scale: 1.05 }}
+                  key={index}
+                  className="cursor-pointer whitespace-nowrap capitalize"
+                >
+                  <span className="text-orange-400 mr-2">▸</span> {tool}
+                </motion.li>
+              ))}
+            </motion.ul>
+            <motion.ul
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 0.6 }}
+              className="flex flex-col gap-1"
+            >
+              <h4 className="capitalize mb-4">tools</h4>
+              {tools.map((tool, index) => (
+                <motion.li
+                  whileHover={{ scale: 1.05 }}
+                  key={index}
+                  className="cursor-pointer whitespace-nowrap capitalize"
+                >
+                  <span className="text-orange-400 mr-2">▸</span> {tool}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
         </motion.div>
       </motion.div>
     </motion.div>
