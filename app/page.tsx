@@ -42,7 +42,7 @@ export default function Home() {
       <Hero isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
       <WorkExperience isDarkMode={isDarkMode} />
-      <ThingsBuilt isDarkMode={isDarkMode} />
+      {/* <ThingsBuilt isDarkMode={isDarkMode} /> */}
       <OtherPojects isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />

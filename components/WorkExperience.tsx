@@ -1,7 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { motion } from "motion/react";
+import { experiences } from "@/database";
 
 const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
+  const [activeJob, setActiveJob] = useState("Tech Fusion");
+
+  const [title, company] = experiences[activeJob]?.title
+    .split("@")
+    .map((part: any) => part.trim());
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,20 +19,48 @@ const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
       id="experience"
       className="w-full px-[12%] py-10 scroll-mt-20"
     >
-      <h4 className="text-center mb-2 text-lg font-ovo">Introduction</h4>
       <h2 className="text-center text-5xl font-ovo my-20 capitalize">
         where i've worked
       </h2>
-      <p className="text-center mx-auto mt-5 mb-12 max-w-2xl font-ovo">
-        I'm an engineer who loves working on challenging problems, cracking them
-        into simpler solutions. I build scalable backend applications, using
-        state of the art technologies with security in mind. I am a big advocate
-        of statecharts and, I love the reactive programming paradigms of rxjs. I
-        graduated from Kwame Nkrumah University of Science and Technology with a
-        bachelor's in Computer Engineering, and for the past 4+ years, I've been
-        among several teams engineering the next big stuff. A glimpse of the
-        things I'm experienced with:
-      </p>
+
+      <div className="flex flex-col md:flex-row text-white min-h-[35rem] p-10">
+        <div className="w-full md:w-1/4 border-b md:border-b-0 md:border-r border-gray-700 pr-5">
+          <ul className="flex md:flex-col overflow-x-auto">
+            {Object.keys(experiences).map((company) => (
+              <li
+                key={company}
+                className={`cursor-pointer py-2 px-3 rounded-md text-gray-900 whitespace-nowrap ${
+                  activeJob === company
+                    ? "bg-orange-400 text-gray-900"
+                    : "hover:bg-gray-700/50 hover:text-white"
+                } dark:text-white`}
+                onClick={() => setActiveJob(company)}
+              >
+                {company}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="w-full md:w-3/4 pl-5 pt-5 md:pt-0 sm:mt-0">
+          <h2 className="text-xl font-bold text-black/90 dark:text-white">
+            {title}&nbsp;
+            <span className="text-orange-400">@&nbsp;{company}</span>{" "}
+          </h2>
+          <p className="text-gray-400 mb-4 capitalize">
+            {experiences[activeJob].date}
+          </p>
+          <ul className="space-y-3 text-black dark:text-white">
+            {experiences[activeJob].details.map(
+              (detail: any, index: number) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-orange-400 mr-2">▸</span> {detail}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+      </div>
     </motion.div>
   );
 };

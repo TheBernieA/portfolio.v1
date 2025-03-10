@@ -43,9 +43,9 @@ const ThingsBuilt = ({ isDarkMode }: { isDarkMode: boolean }) => {
           </motion.div>
         ))}
       </motion.div>
-      <Link
-        href={``}
-        className="capitalize w-max flex items-center justify-center gap-2 text-gray-700 border-[.5px] rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:border-white dark:text-white"
+      <button
+        disabled
+        className={`capitalize w-max flex items-center justify-center gap-2 text-gray-700 border-[.5px] rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:border-white dark:text-white disabled:cursor-not-allowed`}
       >
         show more{" "}
         <Image
@@ -55,7 +55,7 @@ const ThingsBuilt = ({ isDarkMode }: { isDarkMode: boolean }) => {
           alt=""
           className="w-4"
         />
-      </Link>
+      </button>
     </motion.div>
   );
 };

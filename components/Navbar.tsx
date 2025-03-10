@@ -1,6 +1,7 @@
 "use client";
 
 import { assets } from "@/public/assets";
+import BernardLogo from "@/shared/components/Logo";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -56,11 +57,7 @@ const Navbar = ({
         }`}
       >
         <Link href={`/`}>
-          <Image
-            src={isDarkMode ? assets.logo_dark : assets.logo}
-            alt=""
-            className="w-28 cursor-pointer mr-14"
-          />
+          <BernardLogo />
         </Link>
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
