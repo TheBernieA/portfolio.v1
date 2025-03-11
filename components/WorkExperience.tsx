@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { experiences } from "@/database";
+import Link from "next/link";
 
 const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const [activeJob, setActiveJob] = useState("Tech Fusion");
@@ -45,7 +46,13 @@ const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
         <div className="w-full md:w-3/4 pl-5 pt-5 md:pt-0 sm:mt-0">
           <h2 className="text-xl font-bold text-black/90 dark:text-white">
             {title}&nbsp;
-            <span className="text-orange-400">@&nbsp;{company}</span>{" "}
+            <Link
+              href={company.companyLink || "#"}
+              target="_blank"
+              className="text-orange-400"
+            >
+              @&nbsp;{company}
+            </Link>{" "}
           </h2>
           <p className="text-gray-400 mb-4 capitalize">
             {experiences[activeJob].date}

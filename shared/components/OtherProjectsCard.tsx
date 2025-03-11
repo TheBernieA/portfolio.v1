@@ -72,7 +72,7 @@ const OtherProjectsCard = ({
         <Link
           href={externalLink}
           target="_blank"
-          className="font-semibold text-gray-700 dark:text-white"
+          className="font-semibold text-lg text-gray-700 dark:text-white capitalize"
         >
           {title}
         </Link>
