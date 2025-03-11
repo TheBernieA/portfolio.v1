@@ -13,11 +13,11 @@ interface ThingsBuiltCardProps {
 
 const ThingsBuiltCard = (project: ThingsBuiltCardProps) => {
   return (
-    <motion.div className="w-full flex gap-4 rounded-lg border-white/10  shadow-md glass-effect backdrop-blur-lg backdrop-filter overflow-hidden">
+    <motion.div className="w-full flex flex-col lg:flex-row gap-4 rounded-lg border-white/10  shadow-md glass-effect backdrop-blur-lg backdrop-filter overflow-hidden">
       <Image
         src={project.bgImage}
         alt=""
-        className="w-2/5 h-[15rem] object-cover aspect-square rounded-md"
+        className="w-full lg:w-2/5 h-[15rem] object-cover aspect-square rounded-md"
       />
       <div className="flex-1 flex flex-col justify-between px-3 py-4">
         <div className="w-full flex justify-between items-center">
