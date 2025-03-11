@@ -1,75 +1,27 @@
 import { assets } from "@/public/assets";
+import { dwellFinders } from "@/public/assets/project-images";
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: assets.work1,
-  },
-  {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: assets.work2,
-  },
-  {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: assets.work3,
-  },
-  {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: assets.work4,
-  },
-];
-
-export const serviceData = [
-  {
-    icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
-    link: "",
-  },
-  {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
+    title: "dwell finders",
     description:
-      "Mobile app development involves creating software for mobile devices...",
-    link: "",
-  },
-  {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
-    description:
-      "UI/UX design focuses on creating a seamless user experience...",
-    link: "",
-  },
-  {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
-    link: "",
-  },
-];
-
-export const infoList = [
-  {
-    icon: assets.code_icon,
-    iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js",
-  },
-  {
-    icon: assets.edu_icon,
-    iconDark: assets.edu_icon_dark,
-    title: "Education",
-    description: "B.Tech in Computer Science",
-  },
-  {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
+      "A comprehensive online platform to facilitate house hunting by providing detailed listings for rentals and sales.",
+    githubLink: "",
+    externalLink: "https://dwellfinders.com/",
+    bgImage: dwellFinders,
+    tools: [
+      "typescript",
+      "nextjs",
+      "react leaflet",
+      "motion framer",
+      "prisma",
+      "postgressql",
+      "express",
+      "nodejs",
+      "socket",
+      "digitalocean",
+      "docker",
+    ],
   },
 ];
 
@@ -84,14 +36,7 @@ export const toolsData = [
 export const presentation = `A software engineer based in Palermo, Italy, specializing in frontend technologies and building scalable systems.
 Currently bringing ideas to life at TechFusion, my own startup 🚀`;
 
-export const aboutMe = `Front-End Developer with 4+ years of experience building high-performance, cross-browser compliant web apps. Passionate about creating scalable and efficient solutions while continuously learning and pushing the boundaries of web development. Always ready to build the next big thing.
-
-
-
-
-
-
-`;
+export const aboutMe = `Front-End Developer with 4+ years of experience building high-performance, cross-browser compliant web apps. Passionate about creating scalable and efficient solutions while continuously learning and pushing the boundaries of web development. Always ready to build the next big thing.`;
 
 export const links = [
   { name: "github", url: "https://github.com/TheBernieA" },
@@ -101,6 +46,7 @@ export const links = [
 export const experiences: any = {
   "Tech Fusion": {
     title: " Founder & Lead Full-Stack Developer @ Tech Fusion",
+    companyLink: "",
     date: "November 2024 - Present",
     details: [
       "Developed features and implemented end-to-end testing for a SaaS reporting and auditing platform.",
@@ -110,6 +56,7 @@ export const experiences: any = {
   },
   Develhope: {
     title: "Frontend Engineer and Tutor Assistant/Lead @ Develhope",
+    companyLink: "https://www.develhope.co/",
     date: "december 2021 - december 2024",
     details: [
       "Developed 10+ responsive UIs in Angular/React, boosting user engagement via A/B testing.",
@@ -163,5 +110,26 @@ export const otherProjects = [
     title: "CRUD API",
     description: `I developed a CRUD API using Node.js and Express, which was a valuable learning experience in backend development. This project helped me understand how controllers structure an application and how authentication mechanisms work to secure user data. Through this process, I gained hands-on experience with RESTful principles, middleware, and user authentication strategies, strengthening my backend development skills.`,
     tools: ["nodejs", "express", "multer", "jwt"],
+  },
+  {
+    gitHubLink: "https://github.com/TheBernieA/tradebot",
+    externalLink: "",
+    title: "Trade execution system",
+    description: `I build a trading execution system which allows users to place as many trades they want to place at the click of a button. Although my knowledge in trading is very low, I was able to bring this idea to life and I had a lot of fun doing it.`,
+    tools: ["python", "javascript", "html", "css", "Flask", "MetaTrader5"],
+  },
+  {
+    gitHubLink: "https://github.com/TheBernieA/todo-angular-19",
+    externalLink: "",
+    title: "Todo",
+    description: `I build a simple todo app using angular 19 to explore the lastest features angular has to offer with my main focus on understanding how signals work.`,
+    tools: ["angular 19", "angular signals", "typescript"],
+  },
+  {
+    gitHubLink: "",
+    externalLink: "https://fancy-pony-c2738c.netlify.app/",
+    title: "a nike landing page",
+    description: `A sleek and fully responsive landing page web application built with React.js and styled using Tailwind CSS. This project not only enhanced my understanding of Tailwind's utility-first approach but also deepened my expertise in creating modern, responsive user interfaces.`,
+    tools: ["reactjs", "tailwind CSS", "typescript", "netlify"],
   },
 ];
