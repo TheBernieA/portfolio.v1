@@ -17,7 +17,7 @@ const ThingsBuiltCard = (project: ThingsBuiltCardProps) => {
       <Image
         src={project.bgImage}
         alt=""
-        className="w-full lg:w-2/5 h-[15rem] object-cover aspect-square rounded-md"
+        className="w-full lg:w-2/5 h-[10rem] md:h-[15rem] object-cover aspect-square rounded-md"
       />
       <div className="flex-1 flex flex-col justify-between px-3 py-4">
         <div className="w-full flex justify-between items-center">
@@ -69,11 +69,11 @@ const ThingsBuiltCard = (project: ThingsBuiltCardProps) => {
         <p className="text-sm text-gray-700 dark:text-white">
           {project.description}
         </p>
-        <ul className="flex gap-2 flex-wrap">
+        <ul className="flex gap-2 flex-wrap mt-3">
           {project.tools.map((tool, index) => (
             <li
               key={index}
-              className="uppercase px-3 py-1 text-xs dark:text-black/90 font-light bg-gray-200 rounded-full"
+              className="uppercase px-2 md:px-3 py-1 text-[9px] md:text-xs dark:text-black/90 font-light bg-gray-200 rounded-full"
             >
               {tool}
             </li>
