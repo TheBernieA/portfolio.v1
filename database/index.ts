@@ -1,6 +1,10 @@
 import { assets } from "@/public/assets";
 import { dwellFinders } from "@/public/assets/project-images";
 
+export const myName = "bernard amankwah";
+export const email = "bernardamankwah@hotmail.com";
+export const myGithub = "https://github.com/TheBernieA";
+export const myLinkedin = "https://www.linkedin.com/in/theberniea";
 export const workData = [
   {
     title: "dwell finders",

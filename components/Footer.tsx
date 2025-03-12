@@ -1,4 +1,4 @@
-import { links } from "@/database";
+import { email, links } from "@/database";
 import { assets } from "@/public/assets";
 import BernardLogo from "@/shared/components/Logo";
 import Image from "next/image";
@@ -23,9 +23,7 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => {
             alt=""
             className="w-6"
           />
-          <Link href={`mailto:bernardamankwah@hotmail.com`}>
-            bernardamankwah@hotmail.com
-          </Link>
+          <Link href={`mailto:${email}`}>{email}</Link>
         </div>
       </div>
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
