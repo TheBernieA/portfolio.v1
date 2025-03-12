@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={`${outfit.className} ${ovo.className} relative antialiased dark:bg-darkTheme dark:text-white`}
       >
-        <div className="flex items-center flex-col gap-4 fixed bottom-0 left-6">
+        <div className="hidden md:flex items-center flex-col gap-4 fixed bottom-0 left-6">
           <div className="flex flex-col gap-3">
             <Link href={myGithub} target="_blank" title="Github">
               <svg
