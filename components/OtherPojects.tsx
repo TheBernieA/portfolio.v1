@@ -7,7 +7,7 @@ const OtherPojects = ({ isDarkMode }: { isDarkMode: boolean }) => {
       <h2 className="text-center text-5xl font-ovo my-20 capitalize">
         other projects
       </h2>
-      <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
         {otherProjects.map((project, index) => (
           <OtherProjectsCard
             key={index}

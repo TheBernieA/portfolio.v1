@@ -18,7 +18,7 @@ const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="experience"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[12%] py-10 scroll-mt-20 md:max-w-[85%] mx-auto"
     >
       <h2 className="text-center text-5xl font-ovo my-20 capitalize">
         where i've worked

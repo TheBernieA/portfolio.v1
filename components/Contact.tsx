@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { email } from "@/database";
 
 const Contact = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
@@ -24,7 +25,7 @@ const Contact = ({ isDarkMode }: { isDarkMode: boolean }) => {
           answer within a few hours!
         </p>
         <Link
-          href="mailto:bernardamankwah@hotmail.com"
+          href={`mailto:${email}`}
           className="capitalize border border-gray-700 px-4 py-2 hover:bg-lightHover duration-500 dark:border-white dark:hover:text-black"
         >
           Say Hello

@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { assets } from "@/public/assets";
 import { motion } from "motion/react";
-import { presentation } from "@/database";
+import { email, myName, presentation } from "@/database";
 
 const Hero = ({ isDarkMode }: { isDarkMode: boolean }) => {
+  const [firstname, lastname] = myName.split(" ");
   return (
     <div className=" flex flex-col justify-center gap-4 w-9/12 mx-auto h-screen">
       {/* <motion.div
@@ -31,7 +32,7 @@ const Hero = ({ isDarkMode }: { isDarkMode: boolean }) => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl font-bold lg:text-[66px] font-ovo capitalize"
       >
-        bernard amankwah
+        {firstname} <span className="text-orange-400">{lastname}</span>
       </motion.h1>
       <motion.h1
         initial={{ y: -30, opacity: 0 }}
@@ -54,7 +55,7 @@ const Hero = ({ isDarkMode }: { isDarkMode: boolean }) => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          href={`mailto:bernardamankwah@hotmail.com`}
+          href={`mailto:${email}`}
           className="capitalize bg-black text-white px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:bg-transparent"
         >
           get in touch{" "}

@@ -13,7 +13,7 @@ const ThingsBuilt = ({ isDarkMode }: { isDarkMode: boolean }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="work"
-      className="w-[90%] mx-auto px-[12%] py-10 scroll-mt-20"
+      className="w-[90%] mx-auto px-[12%] py-10 scroll-mt-20 md:max-w-[70%]"
     >
       <h2 className="text-center text-5xl font-ovo my-20 capitalize">
         some things i've built
