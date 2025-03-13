@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +18,11 @@ const OtherProjectsCard = ({
   tools,
 }: OtherProjectsCardProps) => {
   return (
-    <li className="flex flex-col gap-4 border-[0.5px] border-gray-400 rounded-xl p-6 hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50">
+    <motion.li
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: .2 }}
+      className="flex flex-col gap-4 min-h-[20rem] border-[0.5px] border-gray-400 rounded-xl p-6 hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50">
       <div className="w-full flex items-center justify-between">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +95,7 @@ const OtherProjectsCard = ({
           </li>
         ))}
       </ul>
-    </li>
+    </motion.li>
   );
 };
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { experiences } from "@/database";
+import { experiences } from "@/database/experience";
 import Link from "next/link";
 
 const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
@@ -30,11 +30,10 @@ const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
             {Object.keys(experiences).map((company) => (
               <li
                 key={company}
-                className={`cursor-pointer py-2 px-3 rounded-md text-gray-900 whitespace-nowrap ${
-                  activeJob === company
-                    ? "bg-orange-400 text-gray-900"
-                    : "hover:bg-gray-700/50 hover:text-white"
-                } dark:text-white`}
+                className={`cursor-pointer py-2 px-3 rounded-md text-gray-900 whitespace-nowrap ${activeJob === company
+                  ? "bg-orange-400 text-gray-900"
+                  : "hover:bg-gray-700/50 hover:text-white"
+                  } dark:text-white`}
                 onClick={() => setActiveJob(company)}
               >
                 {company}

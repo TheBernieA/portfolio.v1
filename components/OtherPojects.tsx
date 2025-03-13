@@ -1,5 +1,6 @@
-import { otherProjects } from "@/database";
+import { otherProjects } from "@/database/otherProject";
 import OtherProjectsCard from "@/shared/components/OtherProjectsCard";
+import { motion } from "motion/react";
 
 const OtherPojects = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
@@ -7,7 +8,10 @@ const OtherPojects = ({ isDarkMode }: { isDarkMode: boolean }) => {
       <h2 className="text-center text-5xl font-ovo my-20 capitalize">
         other projects
       </h2>
-      <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
+      <motion.ul initial={{ opacity: 0, }}
+        whileInView={{ opacity: 1, }}
+        transition={{ duration: 1, }}
+        className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
         {otherProjects.map((project, index) => (
           <OtherProjectsCard
             key={index}
@@ -18,7 +22,7 @@ const OtherPojects = ({ isDarkMode }: { isDarkMode: boolean }) => {
             tools={project.tools}
           />
         ))}
-      </ul>
+      </motion.ul>
     </div>
   );
 };
