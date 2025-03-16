@@ -1,4 +1,5 @@
-import { aboutMe, backend, database, frontend, tools } from "@/database";
+import { aboutMe } from "@/database";
+import { backend, database, frontend, tools } from "@/database/skills";
 import { assets } from "@/public/assets";
 import { motion } from "motion/react";
 import Image from "next/image";
