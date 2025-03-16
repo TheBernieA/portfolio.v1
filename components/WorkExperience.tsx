@@ -27,9 +27,9 @@ const WorkExperience = ({ isDarkMode }: { isDarkMode: boolean }) => {
       <div className="flex flex-col md:flex-row text-white min-h-[35rem] md:p-10">
         <div className="w-full md:w-1/4 border-b md:border-b-0 md:border-r border-gray-700 pr-5">
           <ul className="flex md:flex-col overflow-x-auto">
-            {Object.keys(experiences).map((company) => (
+            {Object.keys(experiences).map((company, index) => (
               <li
-                key={company}
+                key={index}
                 className={`cursor-pointer py-2 px-3 rounded-md text-gray-900 whitespace-nowrap ${activeJob === company
                   ? "bg-orange-400 text-gray-900"
                   : "hover:bg-gray-700/50 hover:text-white"
